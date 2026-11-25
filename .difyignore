@@ -1,0 +1,15 @@
+.git/
+.env
+.env.*
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+tests/
+*.log
+auth.json
+credentials.json
+*.difypkg
+
+.github/

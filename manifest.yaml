@@ -1,0 +1,32 @@
+version: 0.1.0
+type: plugin
+author: cenmax_ai
+name: cenmax_ai
+label:
+  en_US: Cenmax AI
+description:
+  en_US: Cenmax AI subscription models for self-hosted Dify with device authorization.
+created_at: "2026-11-24T00:00:00Z"
+icon: icon.svg
+privacy: PRIVACY.md
+repo: https://github.com/cloudcenmax/cenmax-ai-dify
+contact: support@cenmax.in
+resource:
+  memory: 268435456
+  permission:
+    model:
+      enabled: true
+      llm: true
+plugins:
+  models:
+    - provider/cenmax_ai.yaml
+meta:
+  version: 0.0.1
+  arch: [amd64, arm64]
+  runner:
+    language: python
+    version: "3.12"
+    entrypoint: main
+network:
+  domains:
+    - console.ai.cenmax.in

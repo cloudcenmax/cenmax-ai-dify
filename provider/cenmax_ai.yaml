@@ -1,0 +1,43 @@
+provider: cenmax_ai
+label:
+  en_US: Cenmax AI
+description:
+  en_US: Use models available to your Cenmax AI subscription.
+icon_small:
+  en_US: icon.svg
+icon_large:
+  en_US: icon.svg
+background: "#101827"
+supported_model_types:
+  - llm
+configurate_methods:
+  - customizable-model
+model_credential_schema:
+  model:
+    label:
+      en_US: Public model ID
+    placeholder:
+      en_US: Select an ID returned by your connection's model catalogue
+  credential_form_schemas:
+    - variable: connection_id
+      label:
+        en_US: Connection reference
+      type: secret-input
+      required: true
+      placeholder:
+        en_US: Reference created by the host device-login helper
+provider_credential_schema:
+  credential_form_schemas:
+    - variable: connection_id
+      label:
+        en_US: Connection reference
+      type: secret-input
+      required: true
+models:
+  llm:
+    predefined: []
+extra:
+  python:
+    provider_source: provider/cenmax_ai.py
+    model_sources:
+      - models/llm/llm.py
